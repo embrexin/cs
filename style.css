@@ -78,21 +78,28 @@ p {
     padding: 3vw;
 }
 
-.projectbox {
-    display: flex;
-    position: relative;
-    justify-content: stretch;
-    align-items: flex-start
-}
-
 .info {
     display: flex;
-    flex-grow: 3;
+}
+
+.projectbox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: stretch;
+    max-width: 60%;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: center;
 }
 
 .image {
     margin: 3vw;
-    margin-top: 2vw;
     display: flex;
     flex-grow: 1;
     max-width: 30%;
@@ -189,5 +196,35 @@ p {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 450px) {
+    .projectbox {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: stretch;
+        max-width: 80%;
+    }
+    
+    .project {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        align-items: center;
+    }
+    
+    .image {
+        margin: 3vw;
+        display: flex;
+        flex-grow: 1;
+        max-width: 70%;
+    }
+    
+    .image img {
+        width: 100%;
+        object-fit: contain;
     }
 }
