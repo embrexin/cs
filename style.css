@@ -10,6 +10,29 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* underline animation */
+
+a {
+    background: 
+      linear-gradient(to right, rgba(109, 166, 117, 1), rgba(109, 166, 117, 1)),
+      linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 300ms;
+  }
+
+a:hover,
+a:focus {
+    cursor: pointer;
+    background-size: 0 0.1em, 100% 0.1em;
+}
+
 .background {
     display: none;
     background: #6da675;
@@ -40,24 +63,6 @@ h2 {
     letter-spacing: 0.2em;
 }
 
-/* underline animation */
-
-a {
-    background: 
-      linear-gradient(to right, rgba(109, 166, 117, 1), rgba(109, 166, 117, 1)),
-      linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
-    background-size: 100% 0.1em, 0 0.1em;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 300ms;
-  }
-
-a:hover,
-a:focus {
-    cursor: pointer;
-    background-size: 0 0.1em, 100% 0.1em;
-}
-
 h3 {
     color: white;
     font-family: "Barlow Condensed", serif;
@@ -78,8 +83,12 @@ p {
     padding: 3vw;
 }
 
-.info {
+.project {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: center;
 }
 
 .projectbox {
@@ -90,12 +99,8 @@ p {
     max-width: 60%;
 }
 
-.project {
+.info {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: stretch;
-    align-items: center;
 }
 
 .image {
@@ -108,9 +113,11 @@ p {
 .image img {
     width: 100%;
     object-fit: contain;
+    clip-path: inset(0% 5% 0% 5% round 10px);
 }
 
 /* fade in animation */
+
 .fade-in {
     opacity: 0;
     transition: opacity 250ms ease-in;
@@ -144,8 +151,8 @@ p {
 
 .bouncing-stars {
     display: flex;
-    justify-content: space-between;
-    width: 200px;
+    justify-content: space-around;
+    width: 400px;
 }
 
 .star {
@@ -164,7 +171,7 @@ p {
     left: -20px;
     top: 30px;
     width: 0;
-    height: 0;
+    height: 0px;
     border: 20px solid transparent;
     border-top: 30px solid #6da675;
 }
@@ -226,5 +233,6 @@ p {
     .image img {
         width: 100%;
         object-fit: contain;
+        clip-path: inset(0% 5% 0% 5% round 10px);
     }
 }
