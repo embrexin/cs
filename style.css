@@ -15,6 +15,16 @@ a {
     text-decoration: none;
 }
 
+em {
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-color: #7eb3c2;
+}
+
+.award em {
+    text-decoration-color: #b86665;
+}
+
 /* underline animation */
 
 a {
@@ -33,9 +43,18 @@ a:focus {
     background-size: 0 0.1em, 100% 0.1em;
 }
 
+.image a {
+    background: none;
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 300ms;
+}
+
+/* green = 6da675 */
 .background {
     display: none;
-    background: #6da675;
+    background: black;
     background-size: 300% 300%;
     background-repeat: repeat-y;
 }
@@ -163,6 +182,7 @@ p {
     border-bottom: 30px solid #6da675;
     position: relative;
     animation: bounce 1.5s infinite;
+    top: -20px;
 }
 
 .star:after {
