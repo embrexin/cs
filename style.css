@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Meow+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+em {
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-color: #7eb3c2;
+}
+
+.award em {
+    text-decoration-color: #b86665;
+}
+
+/* underline animation */
+
+a {
+    background: 
+      linear-gradient(to right, rgba(109, 166, 117, 1), rgba(109, 166, 117, 1)),
+      linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 300ms;
+  }
+
+a:hover,
+a:focus {
+    cursor: pointer;
+    background-size: 0 0.1em, 100% 0.1em;
+}
+
+.image a {
+    background: none;
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 300ms;
+}
+
+/* green = 6da675 */
+.background {
+    display: none;
+    background: black;
+    background-size: 300% 300%;
+    background-repeat: repeat-y;
+}
+
+.title {
+    padding: 3vw;
+    animation: fadeAndMove 1.5s;
+}
+
+h1 {
+    color: white;
+    font-family: "Barlow Condensed", serif;
+    font-weight: 200;
+    font-size: clamp(5rem, 8vw, 10vw);
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+h2 {
+    color: white;
+    font-family: "Barlow Condensed", serif;
+    font-weight: 200;
+    font-size: clamp(3rem, 4.5vw, 4rem);
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+
+h3 {
+    color: white;
+    font-family: "Barlow Condensed", serif;
+    font-weight: 150;
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    text-align: left;
+    letter-spacing: 0.1em;
+}
+
+p {
+    color: white;
+    font-family: "Quicksand", serif;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-weight: 400;
+}
+
+.section {
+    padding: 3vw;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.projectbox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: stretch;
+    max-width: 60%;
+}
+
+.projectboxlong {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: stretch;
+    max-width: 100%;
+}
+
+.info {
+    display: flex;
+}
+
+.image {
+    margin: 3vw;
+    display: flex;
+    flex-grow: 1;
+    max-width: 30%;
+}
+
+.image img {
+    width: 100%;
+    object-fit: contain;
+    clip-path: inset(0% 5% 0% 5% round 10px);
+}
+
+/* fade in animation */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+/* title animation */
+
+@keyframes fadeAndMove {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+/* loading animation */
+
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.bouncing-stars {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+}
+
+.star {
+    width: 0;
+    height: 0;
+    aspect-ratio: 1;
+    border: 20px solid transparent;
+    border-bottom: 30px solid #6da675;
+    position: relative;
+    animation: bounce 1.5s infinite;
+    top: -20px;
+}
+
+.star:after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 30px;
+    width: 0;
+    height: 0px;
+    border: 20px solid transparent;
+    border-top: 30px solid #6da675;
+}
+
+.star:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.star:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.star:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes backgroundfadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 450px) {
+    .projectbox {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: stretch;
+        max-width: 80%;
+    }
+    
+    .project {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        align-items: center;
+    }
+    
+    .image {
+        margin: 3vw;
+        display: flex;
+        flex-grow: 1;
+        max-width: 70%;
+    }
+    
+    .image img {
+        width: 100%;
+        object-fit: contain;
+        clip-path: inset(0% 5% 0% 5% round 10px);
+    }
+}
