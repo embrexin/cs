@@ -118,6 +118,14 @@ p {
     max-width: 60%;
 }
 
+.projectboxlong {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: stretch;
+    max-width: 100%;
+}
+
 .info {
     display: flex;
 }
