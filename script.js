@@ -37,3 +37,28 @@ appearOptions);
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
+
+
+const checkbox = document.querySelector(".input");
+//const colorChange = document.querySelector('label[for="myCheckbox"]');
+var clicknum = 0;
+var background = document.getElementsByClassName("background");
+var text = document.querySelectorAll('[id=text]');
+
+checkbox.addEventListener("change", function () {
+  if (clicknum == 0) {
+      background[0].style.background = "#e9edf0";
+      text.forEach(element => {
+        // Process each element
+        element.style.color = "black";
+      });
+      clicknum = 1;
+  } else {
+      background[0].style.background = "black";
+      text.forEach(element => {
+        // Process each element
+        element.style.color = "white";
+      });
+      clicknum = 0;
+  }
+});
