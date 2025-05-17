@@ -83,6 +83,21 @@ h2 {
     letter-spacing: 0.2em;
 }
 
+.box {
+  --b: 5px;      /* border thickness */
+  --c: #a472b0;  /* border color */
+  --w: 40px;     /* horizontal length of the corner */
+  --h: 40px;     /* vertical length of the corner */
+
+  border: var(--b) solid #0000; /* reserve space */
+  --_g: #0000 90deg, var(--c) 0;
+  --_p: var(--w) var(--h) border-box no-repeat;
+
+  background:
+    conic-gradient(from 90deg  at top    var(--b) left  var(--b), var(--_g)) 15%    0    / var(--_p),
+    conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 85%    100% / var(--_p);
+}
+
 h3 {
     color: white;
     font-family: "Barlow Condensed", serif;

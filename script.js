@@ -47,7 +47,7 @@ var text = document.querySelectorAll('[id=text]');
 
 checkbox.addEventListener("change", function () {
   if (clicknum == 0) {
-      background[0].style.background = "#e9edf0";
+      background[0].style.background = "#ebebeb";
       text.forEach(element => {
         // Process each element
         element.style.color = "black";
