@@ -78,7 +78,7 @@ h2 {
     color: white;
     font-family: "Barlow Condensed", serif;
     font-weight: 200;
-    font-size: clamp(3rem, 4.5vw, 4rem);
+    font-size: clamp(3rem, 3.5vw, 4rem);
     text-align: center;
     letter-spacing: 0.2em;
 }
@@ -101,8 +101,8 @@ h2 {
 h3 {
     color: white;
     font-family: "Barlow Condensed", serif;
-    font-weight: 150;
-    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    font-weight: 170;
+    font-size: clamp(2rem, 3vw, 3.5rem);
     text-align: left;
     letter-spacing: 0.1em;
 }
@@ -110,7 +110,7 @@ h3 {
 p {
     color: white;
     font-family: "Quicksand", serif;
-    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
     font-weight: 400;
 }
 
