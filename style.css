@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+* {
+    cursor: none;
+}
+
 body {
     margin-top: 0px;
     margin-right: 0px;
@@ -39,7 +43,6 @@ a {
 
 a:hover,
 a:focus {
-    cursor: pointer;
     background-size: 0 0.1em, 100% 0.1em;
 }
 
@@ -58,6 +61,33 @@ a:focus {
     background-size: 300% 300%;
     background-repeat: repeat-y;
     transition: background-color 0.5s ease;
+}
+
+/* custom cursor */
+
+
+.cursor-dot, .cursor-dot-outline {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out,
+                transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+}
+
+.cursor-dot-outline {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .title {
@@ -159,6 +189,20 @@ p {
     clip-path: inset(0% 5% 0% 5% round 10px);
 }
 
+.imagelong {
+    margin: 3vw;
+    display: flex;
+    flex-grow: 1;
+    max-width: 20%;
+    height: 40%;   
+}
+
+.imagelong img {
+    width: 100%;
+    object-fit: contain;
+    clip-path: inset(0% 5% 0% 5% round 10px);
+}
+
 /* fade in animation */
 
 .fade-in {
@@ -210,7 +254,6 @@ p {
   
   .slider {
     position: absolute;
-    cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
@@ -400,4 +443,18 @@ p {
         object-fit: contain;
         clip-path: inset(0% 5% 0% 5% round 10px);
     }
+
+    .imagelong {
+        margin: 3vw;
+        display: flex;
+        flex-grow: 1;
+        max-width: 50%;
+    }
+
+    .imagelong img {
+        width: 100%;
+        object-fit: contain;
+        clip-path: inset(0% 5% 0% 5% round 10px);
+    }
+
 }
